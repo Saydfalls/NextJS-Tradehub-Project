@@ -10,6 +10,7 @@ const { replace } = useRouter();
 
   function handleSearch(term: string) {
     const params = new URLSearchParams(searchParams.toString());
+    params.set('page', '1');
 
     if (term) {
       params.set('query', term);
